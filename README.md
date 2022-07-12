@@ -1,6 +1,15 @@
 # SeleniumBasedDemo
-## 项目基于PyQt5、seleniumbase开发：
+# 项目基于PyQt5、seleniumbase开发：
 
+## 目录
+- [界面展示](#界面展示)
+- [项目结构说明](#项目结构说明)
+- [安装](#安装)
+
+## 界面展示
+
+
+## 项目结构说明
 images：存放图片以及icon
 
 InstructModule：指令编辑界面，其中qss为大部分控件样式
@@ -42,10 +51,9 @@ qss：pyqt的ui样式文件
 
 
 ## 安装：
-pip install -r requirements.txt
-
-pip install --upgrade pip
-
-cd SeleniumBase
-
-pip install -e . --upgrade --no-cache-dir --progress-bar=off
+```
+pip install -r requirements.txt  
+pip install --upgrade pip  
+cd SeleniumBase  
+pip install -e . --upgrade --no-cache-dir --progress-bar=off  
+```
