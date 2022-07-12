@@ -1,0 +1,2110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	color: rgb(221, 221, 221);
+	font: 10pt &quot;HarmonyOS Sans SC&quot;;
+	background-color: rgb(40, 44, 52);
+}
+/*Tooltip */
+QToolTip {
+	color: rgb(221,221,221);
+	background-color: rgba(33, 37, 43);
+	border: 1px solid rgb(44, 49, 58);
+	background-image: none;
+	background-position: left center;
+    background-repeat: no-repeat;
+	border: none;
+	border-left: 2px solid rgb(111, 168, 220);
+	text-align: left;
+	padding-left: 5px;
+	margin: 0px;
+}
+/*  QDockWidget  */
+QDockWidget {
+  color: rgb(221, 221, 221);
+  font: 10pt &quot;HarmonyOS Sans SC&quot;;
+  background-color: rgb(40, 44, 52);
+  text-transform: uppercase;
+  border: 2px solid rgb(64, 71, 88);
+  border-radius: 5px;
+  titlebar-close-icon:  url(:/icons/images/icons/close.png);
+  titlebar-normal-icon: url(:/icons/images/icons/icon_restore.png);
+}
+QDockWidget&gt;QWidget{
+  border: 2px solid rgb(64, 71, 88);
+  border-radius: 5px;
+  margin-top:5px;
+  margin-left:8px;
+  margin-right:8px;
+  margin-bottom:9px;
+}
+QDockWidget::title {
+  background-color:rgb(33, 37, 43);
+  text-align: left;
+  padding: 5px;
+  padding-left: 3px;
+  margin-top:8px;
+  margin-left:8px;
+  margin-right:8px;
+  border: 2px solid rgb(64, 71, 88);
+  border-radius: 5px;
+}
+QDockWidget::float-button,QDockWidget::close-button
+ {
+    border: 1px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(52, 59, 72);
+    width: 20px; 
+    subcontrol-position: center right;
+    subcontrol-origin: margin;
+    position: absolute;
+    top: 8px; 
+    left: 0px; 
+    bottom: 0px;
+    right:14px;
+}
+
+QDockWidget::float-button:hover {
+  background-color: rgb(57, 65, 80);
+  border: 1px solid rgb(61, 70, 86);
+  border-radius: 5px;
+}
+
+QDockWidget::close-button:hover {
+  background-color: rgb(57, 65, 80);
+  border: 1px solid rgb(61, 70, 86);
+  border-radius: 5px;
+}
+
+QDockWidget::float-button:pressed {
+  background-color: rgb(35, 40, 49);
+  border: 1px solid rgb(43, 50, 61);
+  border-radius: 5px;
+}
+
+QDockWidget::close-button:pressed {
+  background-color: rgb(35, 40, 49);
+  border: 1px solid rgb(43, 50, 61);
+  border-radius: 5px;
+}
+QDockWidget::float-button:disabled,
+QDockWidget::close-button:disabled {
+	border: 1px solid rgb(43, 50, 61);
+	border-radius: 5px;	
+	background-color: rgb(43, 50, 61);
+}
+QDockWidget:disabled {
+    color:rgb(120,120,120);
+	border: 2px solid rgb(43, 50, 61);
+	background-color: rgb(43, 50, 61);
+}
+
+/*  QScrollBar  */
+QScrollBar:horizontal {
+  border: 1px solid  rgb(23, 27, 33);
+  border-radius: 5px;
+  background-color: rgb(23, 27, 33);
+  height: 12px;
+}
+
+QScrollBar:vertical {
+  border: 1px solid  rgb(23, 27, 33);
+  border-radius: 5px;
+  background-color: rgb(23, 27, 33);
+  width: 12px;
+}
+
+QScrollBar::handle {
+  border: 1 solid  rgb(71, 128, 180);
+  border-radius: 5px;
+  background-color: rgb(71, 128, 180);
+}
+
+QScrollBar::handle:horizontal {
+  min-width: 12px;
+}
+
+QScrollBar::handle:vertical {
+  min-height: 12px;
+}
+
+QScrollBar::handle:vertical:hover,
+QScrollBar::handle:horizontal:hover {
+  background-color: rgb(111, 168, 220);
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+  border: 0;
+  background: transparent;
+  width: 0px;
+  height: 0px;
+}
+QScrollBar::add-page:vertical,
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:vertical,
+QScrollBar::sub-page:horizontal
+{
+	background:transparent;
+}
+
+/*  QSlider  */
+QSlider:horizontal {
+  min-height: 24px;
+  max-height: 24px;
+}
+
+QSlider:vertical {
+  min-width: 24px;
+  max-width: 24px;
+}
+
+QSlider::groove:horizontal {
+  height: 4px;
+  background: rgb(33, 37, 43);
+  margin: 0 10px;
+}
+
+QSlider::groove:vertical {
+  width: 4px;
+  background: rgb(33, 37, 43);
+  border-radius: 24px;
+  margin: 10px 0;
+}
+
+QSlider::handle:horizontal {
+  image: url(:/icons/images/icons/circle.svg);
+  width: 20px;
+  height: 20px;
+  margin: -20px -10px;
+}
+
+QSlider::handle:vertical {
+  image: url(:/icons/images/icons/circle.svg);
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  margin: -10px -20px;
+}
+
+QSlider::add-page {
+background: rgb(33, 37, 43);
+}
+
+QSlider::sub-page {
+background: rgb(111, 168, 220);
+}
+
+/*  Spin buttons  */
+QDateTimeEdit,
+QDoubleSpinBox,
+QSpinBox {
+     background-color: rgb(33, 37, 43);
+	border-radius: 5px;
+	border: 2px solid rgb(33, 37, 43);
+	padding-left: 10px;
+	selection-color: rgb(255, 255, 255);
+	selection-background-color: rgb(111, 168, 220);
+}
+QDateTimeEdit:hover,
+QDoubleSpinBox:hover,
+QSpinBox:hover {
+	border: 2px solid rgb(64, 71, 88);
+}
+QDateTimeEdit:focus,
+QDoubleSpinBox:focus,
+QSpinBox:focus {
+	border: 2px solid rgb(91, 101, 124);
+}
+QDateTimeEdit:disabled,
+QDoubleSpinBox:disabled,
+QSpinBox:disabled {
+     color:rgb(120,120,120);
+	border: 2px solid rgb(43, 50, 61);
+	background-color: rgb(43, 50, 61);
+}
+
+QDateTimeEdit::up-button,
+QDoubleSpinBox::up-button,
+QSpinBox::up-button {
+  subcontrol-origin: border;
+  subcontrol-position: top right;
+  width: 20px;
+  image: url(:/icons/images/icons/cil-arrow-top.png);
+  border-width: 0px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+QDateTimeEdit::up-button:disabled,
+QDoubleSpinBox::up-button:disabled,
+QSpinBox::up-button:disabled {
+     image: url(:/icons/images/icons/cil-arrow-top.png);
+     color:rgb(120,120,120);
+}
+
+QDateTimeEdit::down-button,
+QDoubleSpinBox::down-button,
+QSpinBox::down-button {
+  subcontrol-origin: border;
+  subcontrol-position: bottom right;
+  width: 20px;
+  image: url(:/icons/images/icons/cil-arrow-bottom.png);
+  border-width: 0px;
+  border-top-width: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+QDateTimeEdit::down-button:disabled,
+QDoubleSpinBox::down-button:disabled,
+QSpinBox::down-button:disabled {
+  image: url(:/icons/images/icons/cil-arrow-bottom.png);
+}
+
+/*  QComboBox  */
+QComboBox {
+  color:  rgb(221, 221, 221);
+  background-color: rgb(33, 37, 43);
+  border-radius: 5px;
+  border: 2px solid rgb(33, 37, 43);
+  selection-color: rgb(255, 255, 255);
+  selection-background-color: rgb(111, 168, 220);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding-left: 10px;
+  height: 30px;
+}
+QComboBox:hover{
+	border: 2px solid rgb(64, 71, 88);
+}
+QComboBox:focus {
+	border: 2px solid rgb(91, 101, 124);
+}
+QComboBox:disabled {
+  color:rgb(120,120,120);
+  border: 2px solid rgb(43, 50, 61);
+  background-color: rgb(43, 50, 61);
+}
+
+QComboBox::drop-down {
+  border: none;
+  width: 20px;
+}
+
+QComboBox::down-arrow {
+  image: url(:/icons/images/icons/cil-arrow-bottom.png);
+  margin-right: 12px;
+}
+
+QComboBox QAbstractItemView {
+  background-color: rgb(33, 37, 43);
+  border: 2px solid rgb(64, 71, 88);
+  border-radius: 0px;
+}
+QComboBox::indicator:checked {
+  image: url(:/icons/images/icons/cil-check-alt.png);
+}
+
+QComboBox::item {
+  height: 25px;
+  border: 5px solid transparent;
+  padding-left:0px;
+  color:rgb(221, 221, 221);
+}
+QComboBox::item:selected {
+  color:  rgb(221, 221, 221);
+  background-color: rgb(111, 168, 220);
+  border-radius: 0px;
+}
+
+/*Label*/
+QLabel {
+    color: rgb(221, 221, 221);
+    padding-left: 5px;
+    padding-right: 2px;
+	border-radius: 5px;	
+	background-color: transparent;
+}
+QLabel:disabled {
+    color:rgb(120,120,120);
+	background-color: transparent;
+}
+/*Button */
+QPushButton {
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(52, 59, 72);
+}
+QPushButton:hover {
+	background-color: rgb(57, 65, 80);
+	border: 2px solid rgb(61, 70, 86);
+}
+QPushButton:pressed {	
+	background-color: rgb(35, 40, 49);
+	border: 2px solid rgb(43, 50, 61);
+}
+QPushButton:disabled {
+    color:rgb(120,120,120);
+	border: 2px solid rgb(43, 50, 61);
+	border-radius: 5px;	
+	background-color: rgb(43, 50, 61);
+}
+
+/*LineEdit */
+QLineEdit {
+	background-color: rgb(33, 37, 43);
+	border-radius: 5px;
+	border: 2px solid rgb(33, 37, 43);
+	padding-left: 10px;
+	selection-color: rgb(255, 255, 255);
+	selection-background-color: rgb(111, 168, 220);
+}
+QLineEdit:hover {
+	border: 2px solid rgb(64, 71, 88);
+}
+QLineEdit:focus {
+	border: 2px solid rgb(91, 101, 124);
+}
+QLineEdit:disabled {
+    color:rgb(120,120,120);
+	border: 2px solid rgb(43, 50, 61);
+	background-color: rgb(43, 50, 61);
+}
+/* RadioButton */
+QRadioButton::indicator {
+    border: 3px solid rgb(52, 59, 72);
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+    background: rgb(44, 49, 60);
+}
+QRadioButton::indicator:hover {
+    border: 3px solid rgb(58, 66, 81);
+}
+QRadioButton::indicator:checked {
+    background: 3px solid rgb(94, 106, 130);
+	border: 3px solid rgb(52, 59, 72);	
+}
+QRadioButton:disabled {
+    color:rgb(120,120,120);
+	border: 3px solid rgb(43, 50, 61);
+	background-color: rgb(43, 50, 61);
+}
+/*CheckBox */
+QCheckBox::indicator {
+    border: 3px solid rgb(52, 59, 72);
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+    background: rgb(44, 49, 60);
+}
+QCheckBox::indicator:hover {
+    border: 3px solid rgb(58, 66, 81);
+}
+QCheckBox::indicator:checked {
+    background: 3px solid rgb(52, 59, 72);
+	border: 3px solid rgb(52, 59, 72);	
+	background-image: url(:/icons/images/icons/cil-check-alt.png);
+}
+QCheckBox:disabled {
+    color:rgb(120,120,120);
+	border: 3px solid rgb(43, 50, 61);
+	background-color: rgb(43, 50, 61);
+}
+/*  QTabBar  */
+QTabWidget{
+    background-color: rgb(40, 44, 52);
+}
+QTabBar{
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: rgb(40, 44, 52);
+}
+
+QTabBar::tab {
+  max-width:150px;
+  min-width:150px;
+  max-height:30px;
+  min-height:30px;
+  border:0px;
+}
+
+QTabBar::tab:bottom,QTabBar::tab:top{
+  padding: 3px;
+  height: 30px;
+}
+
+QTabBar::tab:left,QTabBar::tab:right{
+  padding: 3px;
+  width: 30px;
+}
+
+QTabBar::tab:top:selected,
+QTabBar::tab:top:hover {
+  color: rgb(109, 158, 235);
+  border-bottom: 3px solid rgb(109, 158, 235);
+}
+
+QTabBar::tab:bottom:selected,
+QTabBar::tab:bottom:hover {
+  padding: 0px;
+  color:rgb(109, 158, 235);
+  border-top: 3px solid rgb(109, 158, 235);
+}
+
+QTabBar::tab:right:selected,
+QTabBar::tab:right:hover {
+  color: rgb(109, 158, 235);
+  border-left: 3px solid rgb(109, 158, 235);
+}
+
+QTabBar::tab:left:selected,
+QTabBar::tab:left:hover {
+  color: rgb(109, 158, 235);
+  border-right: 3px solid rgb(109, 158, 235);
+}
+
+QTabBar::close-button {
+  image: url(:/icons/images/icons/close.svg);
+  background-color:  rgb(40, 44, 52);
+  border-radius: 10px; 
+}
+
+QTabBar::close-button:hover {
+	background-color: rgb(253, 84, 63);
+}
+QTabBar::close-button:pressed {
+	background-color: rgb(196, 58, 43);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>500</width>
+     <height>400</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_10">
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>HarmonyOS Sans SC</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/*  QGroupBox  */
+QGroupBox 
+{
+  background-color: rgb(40, 44, 52);
+  border: 2px solid rgb(64, 71, 88);
+  border-radius: 5px;
+}
+
+QGroupBox.fill_background
+{
+  background-color: rgb(40, 44, 52);
+  border: 2px solid rgb(64, 71, 88);
+  border-radius: 5px;
+}
+QGroupBox {
+  padding: 5px;
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-size: 10;
+}
+
+QGroupBox::title {
+  color: rgb(221,221,221);
+  subcontrol-origin: margin;
+  subcontrol-position: top center;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  background-color:  rgb(40, 44, 52);
+  background-color: transparent;
+  height: 24px;
+}</string>
+      </property>
+      <property name="title">
+       <string>浏览器</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <layout class="QVBoxLayout" name="borswer_layout"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QDockWidget" name="instruct_dockwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>227</width>
+     <height>475</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="windowTitle">
+    <string>指令列表</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="instruct_dockWidgetContents">
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="leftMargin">
+        <number>8</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>8</number>
+       </property>
+       <property name="bottomMargin">
+        <number>9</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QPushButton" name="open_instruct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>打开文件</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/icons/images/icons/open_file.svg</normaloff>:/icons/images/icons/open_file.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="save_instruct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>保存文件</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/icons/images/icons/download.png</normaloff>:/icons/images/icons/download.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="clear_instruct">
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>清除指令列表</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/icons/images/icons/clear_all.svg</normaloff>:/icons/images/icons/clear_all.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_3">
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="up_instruct">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>上移指令</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/icons/images/icons/up.png</normaloff>:/icons/images/icons/up.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="down_instruct">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>下移指令</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/icons/images/icons/down.png</normaloff>:/icons/images/icons/down.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_4">
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="show_instruct">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>显示XPath</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/icons/images/icons/eye.png</normaloff>:/icons/images/icons/eye.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="add_instruct">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>新建指令</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/icons/images/icons/add.png</normaloff>:/icons/images/icons/add.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="edit_instruct">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>HarmonyOS Sans SC</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>编辑指令</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/icons/images/icons/edit.png</normaloff>:/icons/images/icons/edit.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="delete_instruct">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>HarmonyOS Sans SC</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>删除指令</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources.qrc">
+             <normaloff>:/icons/images/icons/trash.png</normaloff>:/icons/images/icons/trash.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line">
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>5</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QTreeWidget" name="instruct_list">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>300</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>HarmonyOS Sans SC</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTreeView {
+  padding:  5px;
+  background-color: rgb(40, 44, 52);
+  border:1px solid rgb(64, 71, 88);
+  height: 30px;
+  border-radius: 4px;
+  margin: 0;
+}
+QTreeView QHeaderView::section {
+  background-color: rgb(33, 37, 43);
+  color: rgb(221,221,221);
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid rgb(64, 71, 88);
+}
+QTreeView::item {
+  min-height: 30px;
+  color: rgb(221, 221, 221);
+  selection-color: rgb(221, 221, 221); /* For Windows */
+}
+/*  Items Selection */
+QTreeView::item:selected {
+  /*
+  background-image: url(:/icons/images/icons/cil-caret-right.png);
+  background-repeat: no-repaet;
+  background-position:center left;
+*/
+  padding:  0px;
+  background-color: rgb(71, 128, 180);
+  selection-background-color: rgb(71, 128, 180);
+  color:rgb(221, 221, 221);
+  selection-color:rgb(221, 221, 221); /* For Windows */
+  border-radius: 4px;
+  border:1px solid rgb(33, 37, 43);
+}
+
+QTreeView::item:selected:focus {
+  background-color: rgb(111, 168, 220);
+  selection-background-color: rgb(111, 168, 220);
+  color: rgb(255, 255, 255);
+  selection-color: rgb(255, 255, 255); /* For Windows */
+}
+
+QTreeView::item:disabled {
+  color: rgb(120,120,120);
+  selection-color: rgb(120,120,120);
+  background-color: rgb(43, 50, 61);
+  selection-background-color: rgb(43, 50, 61);
+}
+QTreeView::branch{
+  background-color: rgb(40, 44, 52);
+}
+
+QTreeView::branch:closed:has-children:has-siblings,
+QTreeView::branch:closed:has-children:!has-siblings {
+  image: url(:/icons/images/icons/cil-caret-right.png);
+  padding: 5px;
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings {
+  image: url(:/icons/images/icons/cil-caret-bottom.png);
+  padding: 5px;
+}
+
+QTreeView QLineEdit {
+  color: rgb(221, 221, 221);
+  background-color: rgb(40, 44, 52);
+  border: 1px solid unset;
+  border-radius: unset;
+  padding: unset;
+  padding-left: unset;
+  height: unset;
+  border-width: unset;
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+}</string>
+         </property>
+         <column>
+          <property name="text">
+           <string>步骤</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+         </column>
+         <item>
+          <property name="text">
+           <string>登录</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <item>
+           <property name="text">
+            <string>打开登录网址</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>用户名</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>密码</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>验证码</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>验证码图片</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>登录按钮</string>
+           </property>
+          </item>
+         </item>
+         <item>
+          <property name="text">
+           <string>操作</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="edit_dockwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>809</width>
+     <height>288</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="windowTitle">
+    <string>登录</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="edit_dockWidgetContents">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="leftMargin">
+        <number>8</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>8</number>
+       </property>
+       <property name="bottomMargin">
+        <number>9</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="type_label">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>HarmonyOS Sans SC</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>操作</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="type">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>120</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>HarmonyOS Sans SC</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <property name="frame">
+            <bool>true</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string>打开网址</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>点击</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>输入文本</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>切换</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>复选</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>获取元素</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="xpath_label">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>HarmonyOS Sans SC</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>定位方式</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="xpath">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="extra_label">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>用户名</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="extra_input">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="index_label">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>HarmonyOS Sans SC</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>数据索引</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="index">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>HarmonyOS Sans SC</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="maximum">
+            <number>200</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="submit">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>HarmonyOS Sans SC</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>提交</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="clear">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>HarmonyOS Sans SC</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>清除</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="table_editor" native="true">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QPushButton" name="delete_row">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>85</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>85</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>HarmonyOS Sans SC</family>
+                  <pointsize>10</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>删除行</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="add_row">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>85</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>85</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>HarmonyOS Sans SC</family>
+                  <pointsize>10</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>新增行</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="xpath_table">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>HarmonyOS Sans SC</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::StrongFocus</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QTableView {
+  font: 10t &quot;HarmonyOS Sans SC&quot;;
+  background-color: rgb(40, 44, 52);
+  border: 1px solid rgb(64, 71, 88);
+  border-radius: 4px;
+  selection-background-color: rgb(71, 128, 180);
+  /*两行交替的颜色，第二行*/
+  alternate-background-color: rgb(43, 47, 53);
+}
+
+QTableView:focus {
+  selection-background-color: rgb(111, 168, 220);
+}
+
+QTableView::item {
+  font: 8t &quot;HarmonyOS Sans SC&quot;;
+  padding: 0px;
+  min-height: 32px;
+  color: rgb(221, 221, 221);
+  selection-color: rgb(221, 221, 221); /* For Windows */
+}
+/*  Items Selection */
+QTableView::item:selected {
+  background-color: rgb(71, 128, 180);
+  selection-background-color: rgb(71, 128, 180);
+  color:rgb(221, 221, 221);
+  selection-color:rgb(221, 221, 221); /* For Windows */
+}
+
+QTableView::item:selected:focus {
+  background-color: rgb(111, 168, 220);
+  selection-background-color: rgb(111, 168, 220);
+  color: rgb(255, 255, 255);
+  selection-color: rgb(255, 255, 255); /* For Windows */
+}
+QTableView::item:disabled {
+  color: rgb(120,120,120);
+  selection-color: rgb(120,120,120);
+  background-color: rgb(43, 50, 61);
+  selection-background-color: rgb(43, 50, 61);
+}
+/*  QTableView  */
+
+QTableCornerButton::section {
+  background-color: rgb(33, 37, 43);
+  border-radius: 2px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: rgb(64, 71, 88);
+}
+QTableCornerButton::section:disabled {
+  background-color:  rgb(43, 50, 61);
+  border-radius: 2px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: rgb(64, 71, 88);
+}
+
+QHeaderView {
+  border: none;
+}
+
+QHeaderView::section:disabled {
+  color: rgb(120, 120, 120);
+  text-transform: uppercase;
+  background-color: rgb(43, 50, 61);
+  border-radius: 2px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color:rgb(64, 71, 88);
+}
+QHeaderView::section {
+  color: rgb(221, 221, 221);
+  text-transform: uppercase;
+  background-color: rgb(33, 37, 43);
+  border-radius: 2px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color:rgb(64, 71, 88);
+}
+
+QHeaderView::section:horizontal
+{
+  padding: 10 0 10 0;
+}
+QHeaderView::section:vertical
+{
+  padding: 0 10 0 10;
+}
+QTableView QLineEdit {
+  color: rgb(221, 221, 221);
+  background-color: rgb(33, 37, 43);
+  border: 1px solid rgb(111, 168, 220);
+  border-radius: unset;
+  padding: unset;
+  padding-left: unset;
+  height: unset;
+  border-width: unset;
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+}
+QTableView QLineEdit:hover {
+	border: 2px solid rgb(64, 71, 88);
+}
+QTableView QLineEdit:focus {
+	border: 2px solid rgb(91, 101, 124);
+}</string>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="showGrid">
+               <bool>true</bool>
+              </property>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderMinimumSectionSize">
+               <number>40</number>
+              </attribute>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>100</number>
+              </attribute>
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderMinimumSectionSize">
+               <number>25</number>
+              </attribute>
+              <attribute name="verticalHeaderDefaultSectionSize">
+               <number>30</number>
+              </attribute>
+              <attribute name="verticalHeaderStretchLastSection">
+               <bool>true</bool>
+              </attribute>
+              <row>
+               <property name="text">
+                <string>1</string>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string>名称</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>XPath</string>
+               </property>
+              </column>
+              <item row="0" column="0">
+               <property name="text">
+                <string/>
+               </property>
+              </item>
+              <item row="0" column="1">
+               <property name="text">
+                <string/>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,1817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>873</width>
+    <height>944</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	color: rgb(221, 221, 221);
+	font: 10pt &quot;HarmonyOS Sans SC&quot;;
+	background-color: rgb(40, 44, 52);
+}
+/*Tooltip */
+QToolTip {
+	color: rgb(221,221,221);
+	background-color: rgba(33, 37, 43);
+	border: 1px solid rgb(44, 49, 58);
+	background-image: none;
+	background-position: left center;
+    background-repeat: no-repeat;
+	border: none;
+	border-left: 2px solid rgb(111, 168, 220);
+	text-align: left;
+	padding-left: 5px;
+	margin: 0px;
+}
+/*  QDockWidget  */
+QDockWidget {
+  color: rgb(221, 221, 221);
+  font: 10pt &quot;HarmonyOS Sans SC&quot;;
+  background-color: rgb(40, 44, 52);
+  text-transform: uppercase;
+  border: 2px solid rgb(64, 71, 88);
+  border-radius: 5px;
+  titlebar-close-icon:  url(:/icons/images/icons/close.png);
+  titlebar-normal-icon: url(:/icons/images/icons/icon_restore.png);
+}
+QDockWidget&gt;QWidget{
+  border: 2px solid rgb(64, 71, 88);
+  border-radius: 5px;
+  margin-top:5px;
+  margin-left:8px;
+  margin-right:8px;
+  margin-bottom:9px;
+}
+QDockWidget::title {
+  background-color:rgb(33, 37, 43);
+  text-align: left;
+  padding: 5px;
+  padding-left: 3px;
+  margin-top:8px;
+  margin-left:8px;
+  margin-right:8px;
+  border: 2px solid rgb(64, 71, 88);
+  border-radius: 5px;
+}
+QDockWidget::float-button,QDockWidget::close-button
+ {
+    border: 1px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(52, 59, 72);
+    width: 20px; 
+    subcontrol-position: center right;
+    subcontrol-origin: margin;
+    position: absolute;
+    top: 8px; 
+    left: 0px; 
+    bottom: 0px;
+    right:14px;
+}
+
+QDockWidget::float-button:hover {
+  background-color: rgb(57, 65, 80);
+  border: 1px solid rgb(61, 70, 86);
+  border-radius: 5px;
+}
+
+QDockWidget::close-button:hover {
+  background-color: rgb(57, 65, 80);
+  border: 1px solid rgb(61, 70, 86);
+  border-radius: 5px;
+}
+
+QDockWidget::float-button:pressed {
+  background-color: rgb(35, 40, 49);
+  border: 1px solid rgb(43, 50, 61);
+  border-radius: 5px;
+}
+
+QDockWidget::close-button:pressed {
+  background-color: rgb(35, 40, 49);
+  border: 1px solid rgb(43, 50, 61);
+  border-radius: 5px;
+}
+QDockWidget::float-button:disabled,
+QDockWidget::close-button:disabled {
+	border: 1px solid rgb(43, 50, 61);
+	border-radius: 5px;	
+	background-color: rgb(43, 50, 61);
+}
+QDockWidget:disabled {
+    color:rgb(120,120,120);
+	border: 2px solid rgb(43, 50, 61);
+	background-color: rgb(43, 50, 61);
+}
+
+/*  QScrollBar  */
+QScrollBar:horizontal {
+  border: 1px solid  rgb(23, 27, 33);
+  border-radius: 5px;
+  background-color: rgb(23, 27, 33);
+  height: 12px;
+}
+
+QScrollBar:vertical {
+  border: 1px solid  rgb(23, 27, 33);
+  border-radius: 5px;
+  background-color: rgb(23, 27, 33);
+  width: 12px;
+}
+
+QScrollBar::handle {
+  border: 1 solid  rgb(71, 128, 180);
+  border-radius: 5px;
+  background-color: rgb(71, 128, 180);
+}
+
+QScrollBar::handle:horizontal {
+  min-width: 12px;
+}
+
+QScrollBar::handle:vertical {
+  min-height: 12px;
+}
+
+QScrollBar::handle:vertical:hover,
+QScrollBar::handle:horizontal:hover {
+  background-color: rgb(111, 168, 220);
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+  border: 0;
+  background: transparent;
+  width: 0px;
+  height: 0px;
+}
+QScrollBar::add-page:vertical,
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:vertical,
+QScrollBar::sub-page:horizontal
+{
+	background:transparent;
+}
+
+/*  QSlider  */
+QSlider:horizontal {
+  min-height: 24px;
+  max-height: 24px;
+}
+
+QSlider:vertical {
+  min-width: 24px;
+  max-width: 24px;
+}
+
+QSlider::groove:horizontal {
+  height: 4px;
+  background: rgb(33, 37, 43);
+  margin: 0 10px;
+}
+
+QSlider::groove:vertical {
+  width: 4px;
+  background: rgb(33, 37, 43);
+  border-radius: 24px;
+  margin: 10px 0;
+}
+
+QSlider::handle:horizontal {
+  image: url(:/icons/images/icons/circle.svg);
+  width: 20px;
+  height: 20px;
+  margin: -20px -10px;
+}
+
+QSlider::handle:vertical {
+  image: url(:/icons/images/icons/circle.svg);
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  margin: -10px -20px;
+}
+
+QSlider::add-page {
+background: rgb(33, 37, 43);
+}
+
+QSlider::sub-page {
+background: rgb(111, 168, 220);
+}
+
+/*  Spin buttons  */
+QDateTimeEdit,
+QDoubleSpinBox,
+QSpinBox {
+     background-color: rgb(33, 37, 43);
+	border-radius: 5px;
+	border: 2px solid rgb(33, 37, 43);
+	padding-left: 10px;
+	selection-color: rgb(255, 255, 255);
+	selection-background-color: rgb(111, 168, 220);
+}
+QDateTimeEdit:hover,
+QDoubleSpinBox:hover,
+QSpinBox:hover {
+	border: 2px solid rgb(64, 71, 88);
+}
+QDateTimeEdit:focus,
+QDoubleSpinBox:focus,
+QSpinBox:focus {
+	border: 2px solid rgb(91, 101, 124);
+}
+QDateTimeEdit:disabled,
+QDoubleSpinBox:disabled,
+QSpinBox:disabled {
+     color:rgb(120,120,120);
+	border: 2px solid rgb(43, 50, 61);
+	background-color: rgb(43, 50, 61);
+}
+
+QDateTimeEdit::up-button,
+QDoubleSpinBox::up-button,
+QSpinBox::up-button {
+  subcontrol-origin: border;
+  subcontrol-position: top right;
+  width: 20px;
+  image: url(:/icons/images/icons/cil-arrow-top.png);
+  border-width: 0px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+QDateTimeEdit::up-button:disabled,
+QDoubleSpinBox::up-button:disabled,
+QSpinBox::up-button:disabled {
+     image: url(:/icons/images/icons/cil-arrow-top.png);
+     color:rgb(120,120,120);
+}
+
+QDateTimeEdit::down-button,
+QDoubleSpinBox::down-button,
+QSpinBox::down-button {
+  subcontrol-origin: border;
+  subcontrol-position: bottom right;
+  width: 20px;
+  image: url(:/icons/images/icons/cil-arrow-bottom.png);
+  border-width: 0px;
+  border-top-width: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+QDateTimeEdit::down-button:disabled,
+QDoubleSpinBox::down-button:disabled,
+QSpinBox::down-button:disabled {
+  image: url(:/icons/images/icons/cil-arrow-bottom.png);
+}
+
+/*  QComboBox  */
+QComboBox {
+  color:  rgb(221, 221, 221);
+  background-color: rgb(33, 37, 43);
+  border-radius: 5px;
+  border: 2px solid rgb(33, 37, 43);
+  selection-color: rgb(255, 255, 255);
+  selection-background-color: rgb(111, 168, 220);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding-left: 10px;
+  height: 30px;
+}
+QComboBox:hover{
+	border: 2px solid rgb(64, 71, 88);
+}
+QComboBox:focus {
+	border: 2px solid rgb(91, 101, 124);
+}
+QComboBox:disabled {
+  color:rgb(120,120,120);
+  border: 2px solid rgb(43, 50, 61);
+  background-color: rgb(43, 50, 61);
+}
+
+QComboBox::drop-down {
+  border: none;
+  width: 20px;
+}
+
+QComboBox::down-arrow {
+  image: url(:/icons/images/icons/cil-arrow-bottom.png);
+  margin-right: 12px;
+}
+
+QComboBox QAbstractItemView {
+  background-color: rgb(33, 37, 43);
+  border: 2px solid rgb(64, 71, 88);
+  border-radius: 0px;
+}
+QComboBox::indicator:checked {
+  image: url(:/icons/images/icons/cil-check-alt.png);
+}
+
+QComboBox::item {
+  height: 25px;
+  border: 5px solid transparent;
+  padding-left:0px;
+  color:rgb(221, 221, 221);
+}
+QComboBox::item:selected {
+  color:  rgb(221, 221, 221);
+  background-color: rgb(111, 168, 220);
+  border-radius: 0px;
+}
+
+/*Label*/
+QLabel {
+    color: rgb(221, 221, 221);
+    padding-left: 5px;
+    padding-right: 2px;
+	border-radius: 5px;	
+	background-color: transparent;
+}
+QLabel:hover {
+    background-color: rgb(57, 65, 80);
+	border: 2px solid rgb(61, 70, 86);;
+}
+QLabel:disabled {
+    color:rgb(120,120,120);
+	background-color: transparent;
+}
+/*Button */
+QPushButton {
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(52, 59, 72);
+}
+QPushButton:hover {
+	background-color: rgb(57, 65, 80);
+	border: 2px solid rgb(61, 70, 86);
+}
+QPushButton:pressed {	
+	background-color: rgb(35, 40, 49);
+	border: 2px solid rgb(43, 50, 61);
+}
+QPushButton:disabled {
+    color:rgb(120,120,120);
+	border: 2px solid rgb(43, 50, 61);
+	border-radius: 5px;	
+	background-color: rgb(43, 50, 61);
+}
+
+/*LineEdit */
+QLineEdit {
+	background-color: rgb(33, 37, 43);
+	border-radius: 5px;
+	border: 2px solid rgb(33, 37, 43);
+	padding-left: 10px;
+	selection-color: rgb(255, 255, 255);
+	selection-background-color: rgb(111, 168, 220);
+}
+QLineEdit:hover {
+	border: 2px solid rgb(64, 71, 88);
+}
+QLineEdit:focus {
+	border: 2px solid rgb(91, 101, 124);
+}
+QLineEdit:disabled {
+    color:rgb(120,120,120);
+	border: 2px solid rgb(43, 50, 61);
+	background-color: rgb(43, 50, 61);
+}
+/* RadioButton */
+QRadioButton::indicator {
+    border: 3px solid rgb(52, 59, 72);
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+    background: rgb(44, 49, 60);
+}
+QRadioButton::indicator:hover {
+    border: 3px solid rgb(58, 66, 81);
+}
+QRadioButton::indicator:checked {
+    background: 3px solid rgb(94, 106, 130);
+	border: 3px solid rgb(52, 59, 72);	
+}
+QRadioButton:disabled {
+    color:rgb(120,120,120);
+	border: 3px solid rgb(43, 50, 61);
+	background-color: rgb(43, 50, 61);
+}
+/*CheckBox */
+QCheckBox::indicator {
+    border: 3px solid rgb(52, 59, 72);
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+    background: rgb(44, 49, 60);
+}
+QCheckBox::indicator:hover {
+    border: 3px solid rgb(58, 66, 81);
+}
+QCheckBox::indicator:checked {
+    background: 3px solid rgb(52, 59, 72);
+	border: 3px solid rgb(52, 59, 72);	
+	background-image: url(:/icons/images/icons/cil-check-alt.png);
+}
+QCheckBox:disabled {
+    color:rgb(120,120,120);
+	border: 3px solid rgb(43, 50, 61);
+	background-color: rgb(43, 50, 61);
+}
+/*  QTabBar  */
+QTabWidget{
+    background-color: rgb(40, 44, 52);
+}
+QTabBar{
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: rgb(40, 44, 52);
+}
+
+QTabBar::tab {
+  max-width:150px;
+  min-width:150px;
+  max-height:30px;
+  min-height:30px;
+  border:0px;
+}
+
+QTabBar::tab:bottom,QTabBar::tab:top{
+  padding: 3px;
+  height: 30px;
+}
+
+QTabBar::tab:left,QTabBar::tab:right{
+  padding: 3px;
+  width: 30px;
+}
+
+QTabBar::tab:top:selected,
+QTabBar::tab:top:hover {
+  color: rgb(109, 158, 235);
+  border-bottom: 3px solid rgb(109, 158, 235);
+}
+
+QTabBar::tab:bottom:selected,
+QTabBar::tab:bottom:hover {
+  padding: 0px;
+  color:rgb(109, 158, 235);
+  border-top: 3px solid rgb(109, 158, 235);
+}
+
+QTabBar::tab:right:selected,
+QTabBar::tab:right:hover {
+  color: rgb(109, 158, 235);
+  border-left: 3px solid rgb(109, 158, 235);
+}
+
+QTabBar::tab:left:selected,
+QTabBar::tab:left:hover {
+  color: rgb(109, 158, 235);
+  border-right: 3px solid rgb(109, 158, 235);
+}
+
+QTabBar::close-button {
+  image: url(:/icons/images/icons/close.svg);
+  background-color:  rgb(40, 44, 52);
+  border-radius: 10px; 
+}
+
+QTabBar::close-button:hover {
+	background-color: rgb(253, 84, 63);
+}
+QTabBar::close-button:pressed {
+	background-color: rgb(196, 58, 43);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="QTabWidget" name="tab">
+      <property name="styleSheet">
+       <string notr="true">QTableView {
+  font: 10t &quot;HarmonyOS Sans SC&quot;;
+  background-color: rgb(40, 44, 52);
+  border: 1px solid rgb(64, 71, 88);
+  border-radius: 4px;
+  selection-background-color: rgb(71, 128, 180);
+  /*两行交替的颜色，第二行*/
+  alternate-background-color: rgb(43, 47, 53);
+}
+
+QTableView:focus {
+  selection-background-color: rgb(111, 168, 220);
+}
+
+QTableView::item {
+  font: 8t &quot;HarmonyOS Sans SC&quot;;
+  padding: 0px;
+  min-height: 32px;
+  color: rgb(221, 221, 221);
+  selection-color: rgb(221, 221, 221); /* For Windows */
+}
+/*  Items Selection */
+QTableView::item:selected {
+  background-color: rgb(71, 128, 180);
+  selection-background-color: rgb(71, 128, 180);
+  color:rgb(221, 221, 221);
+  selection-color:rgb(221, 221, 221); /* For Windows */
+}
+
+QTableView::item:selected:focus {
+  background-color: rgb(111, 168, 220);
+  selection-background-color: rgb(111, 168, 220);
+  color: rgb(255, 255, 255);
+  selection-color: rgb(255, 255, 255); /* For Windows */
+}
+QTableView::item:disabled {
+  color: rgb(120,120,120);
+  selection-color: rgb(120,120,120);
+  background-color: rgb(43, 50, 61);
+  selection-background-color: rgb(43, 50, 61);
+}
+/*  QTableView  */
+
+QTableCornerButton::section {
+  background-color: rgb(33, 37, 43);
+  border-radius: 2px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: rgb(64, 71, 88);
+}
+QTableCornerButton::section:disabled {
+  background-color:  rgb(43, 50, 61);
+  border-radius: 2px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: rgb(64, 71, 88);
+}
+
+QHeaderView {
+  border: none;
+}
+
+QHeaderView::section:disabled {
+  color: rgb(120, 120, 120);
+  text-transform: uppercase;
+  background-color: rgb(43, 50, 61);
+  border-radius: 2px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color:rgb(64, 71, 88);
+}
+QHeaderView::section {
+  color: rgb(221, 221, 221);
+  text-transform: uppercase;
+  background-color: rgb(33, 37, 43);
+  border-radius: 2px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color:rgb(64, 71, 88);
+}
+
+QHeaderView::section:horizontal
+{
+  padding: 10 0 10 0;
+}
+QHeaderView::section:vertical
+{
+  padding: 0 10 0 10;
+}
+QTableView QLineEdit {
+  color: rgb(221, 221, 221);
+  background-color: rgb(33, 37, 43);
+  border: 1px solid rgb(111, 168, 220);
+  border-radius: unset;
+  padding: unset;
+  padding-left: unset;
+  height: unset;
+  border-width: unset;
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+}
+QTableView QLineEdit:hover {
+	border: 2px solid rgb(64, 71, 88);
+}
+QTableView QLineEdit:focus {
+	border: 2px solid rgb(91, 101, 124);
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="last">
+       <attribute name="title">
+        <string>运行结果</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="topMargin">
+         <number>15</number>
+        </property>
+        <item row="1" column="0">
+         <widget class="QWebEngineView" name="web" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="backward">
+            <property name="minimumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>后退</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources.qrc">
+              <normaloff>:/icons/images/icons/backward.png</normaloff>:/icons/images/icons/backward.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="forward">
+            <property name="minimumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>前进</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources.qrc">
+              <normaloff>:/icons/images/icons/forward.png</normaloff>:/icons/images/icons/forward.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="refresh">
+            <property name="minimumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>刷新</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources.qrc">
+              <normaloff>:/icons/images/icons/refresh.png</normaloff>:/icons/images/icons/refresh.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>14</width>
+              <height>14</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>210</width>
+     <height>740</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>350</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>设置</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>600</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <property name="bottomMargin">
+      <number>12</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>600</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>400</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>HarmonyOS Sans SC</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_20">
+          <item>
+           <widget class="QCheckBox" name="demo">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>演示</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="console">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>控制台</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="report">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>报告</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="head">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>后台执行</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="max">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>最大化网页窗口</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="screenshot">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存最后页面截图</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="rs">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>重用会话框</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="first_stop">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>遇错即停</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>28</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>HarmonyOS Sans SC</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>线程数目</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="thread_num">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>28</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>HarmonyOS Sans SC</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="font">
+               <font>
+                <family>HarmonyOS Sans SC</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>演示间隔(秒)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="demo_sleep">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>28</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>HarmonyOS Sans SC</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="font">
+               <font>
+                <family>HarmonyOS Sans SC</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>演示闪烁次数</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="highlights">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>28</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>HarmonyOS Sans SC</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+              <property name="value">
+               <number>3</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="font">
+               <font>
+                <family>HarmonyOS Sans SC</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>浏览器</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="browser">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>28</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>HarmonyOS Sans SC</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <item>
+               <property name="text">
+                <string>谷歌</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>火狐</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>edge</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ie</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="save">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>保存</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources.qrc">
+              <normaloff>:/icons/images/icons/cil-save.png</normaloff>:/icons/images/icons/cil-save.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>14</width>
+              <height>14</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_14">
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="font">
+               <font>
+                <family>HarmonyOS Sans SC</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>驱动版本</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="driver">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>28</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>28</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="install">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>HarmonyOS Sans SC</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>下载驱动</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources.qrc">
+              <normaloff>:/icons/images/icons/cil-cloud-download.png</normaloff>:/icons/images/icons/cil-cloud-download.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>14</width>
+              <height>14</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_4">
+   <property name="minimumSize">
+    <size>
+     <width>297</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+</string>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="windowTitle">
+    <string>运行</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4">
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>120</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>HarmonyOS Sans SC</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>配置文件路径</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="config_path">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="select_config">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>HarmonyOS Sans SC</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(52, 59, 72);</string>
+         </property>
+         <property name="text">
+          <string>选择文件</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/icons/images/icons/cil-folder-open.png</normaloff>:/icons/images/icons/cil-folder-open.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>HarmonyOS Sans SC</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>数据文件路径</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="data_path">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="select_data">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>HarmonyOS Sans SC</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>选择文件</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/icons/images/icons/cil-folder-open.png</normaloff>:/icons/images/icons/cil-folder-open.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_17">
+       <item>
+        <widget class="QPushButton" name="run">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>HarmonyOS Sans SC</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>运行</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/icons/images/icons/cil-media-play.png</normaloff>:/icons/images/icons/cil-media-play.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="stop">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>HarmonyOS Sans SC</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>暂停</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/icons/images/icons/cil-media-stop.png</normaloff>:/icons/images/icons/cil-media-stop.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header location="global">QtWebEngineWidgets/QWebEngineView</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,32 @@
+ToolTip[dark="false"] {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    background-color: rgb(243, 243, 243);
+}
+
+ToolTip[dark="true"] {
+    border: 1px solid rgb(28, 28, 28);
+    border-radius: 3px;
+    background-color: rgb(53, 57, 63);
+}
+
+QLabel {
+    background-color: transparent;
+    font: 10pt;
+}
+
+QLabel[dark="false"] {
+    color: black;
+}
+QLabel[dark="true"][status="normal"] {
+     color: rgb(113, 126, 149);
+}
+QLabel[dark="true"][status="error"] {
+     color: rgb(221, 126, 107);
+}
+QLabel[dark="true"][status="warning"] {
+     color: rgb(255, 217, 102);
+}
+QLabel[dark="true"][status="success"] {
+     color: rgb(106, 168, 79);
+}
