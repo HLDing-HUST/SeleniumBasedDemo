@@ -20,7 +20,7 @@
     * Menu：主界面菜单栏，根据配置实现子界面切换    
 * LoginModule：登录功能
 * MainWindowModule：主界面功能
-* WebModule：自定义web功能，包括新页面、主页、前进、后退、刷新、访问、xpath提取
+* WebModule：自定义web功能，包括新页面、主页、前进、后退、刷新、访问、xpath提取等
 * RunModule：自定义RPA执行界面，包括数据的可视化、选择执行、报告输出查看等
 * RpaReport: 用于存放输出报告
 * RpaFile: 用于存放生成的RPA文件
