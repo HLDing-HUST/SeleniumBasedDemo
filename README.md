@@ -7,7 +7,7 @@
 - [安装](#安装)
 
 ## 界面展示
-
+![界面展示](https://github.com/HLDing-HUST/SeleniumBasedDemo/blob/main/demo.gif)
 
 ## 项目结构说明
 * images：存放图片以及icon
@@ -32,7 +32,7 @@
 * qss：pyqt的ui样式文件
 
 
-## 安装：
+## 安装
 ```
 pip install -r requirements.txt  
 pip install --upgrade pip  
